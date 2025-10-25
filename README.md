@@ -97,6 +97,7 @@ Nota: al crear el componenete se crea el controlador del componente, y la vista 
 - en la vista creamos el componente y podemos usar las variables definidas en la clase
 
 {{$slot}} = predeterminado para introducion informacion, html, y otros componentes
+
 {{$personalizada}} = area para colocar informacion, html y otros componentes personalizada
 
 ## acceder y usar el componente
