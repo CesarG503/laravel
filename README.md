@@ -89,3 +89,17 @@ Ejemplo:
 - php artisan make:component alert
 
 Nota: al crear el componenete se crea el controlador del componente, y la vista del componente
+
+## editar y manipular los componentes 
+
+- en el controlador difinimos la variables que necesitara el componenete
+
+- en la vista creamos el componente y podemos usar las variables definidas en la clase
+
+{{$slot}} = predeterminado para introducion informacion, html, y otros componentes
+{{$personalizada}} = area para colocar informacion, html y otros componentes personalizada
+
+## acceder y usar el componente
+
+- llamamos el compoenente: `<x-nombre_del_componente > INFO </x-nombre_del_componente >`
+- para introduccion informacion en los demas espacios: `<x-slot:personalizado></x-slot:personalizado>`
