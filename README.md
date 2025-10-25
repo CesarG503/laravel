@@ -46,6 +46,44 @@ Route::controller(MainController::class)->group(function()
 
 });
 
+## `##`<hr>`##`
+
+## Creamos la plantilla inicial 
+
+Estructura basica html y si necesitamos una cdn en el header y en footer.
+reserbamos los lugar en la plantilla base con @yeild
+
+Ejemplo:
+
+@yeild('titulo','Documento')
+
+<header>
+    @yield('header')
+</header>
+<div>
+    @yield('content')
+</div>
+<section>
+    @yield('section')
+</section>
+<footer>
+    @yield('footer')
+</footer>
+
+## Usar como base la plantilla creada: @extends()
+
+@extends('layout.base')
+
+## llenar los apartados de la pltantilla que creamos y usamos
+
+@section('titulo', 'INICIO')
+
+@section('header')
+
+`<h1>`BIENVENIDOS`</h1>`
+
+@endsection
+
 ### componente con clase
 
 - php artisan make:component alert
