@@ -7,3 +7,8 @@
 ## composer
 
     Es un gestor de dependencias para PHP que automatiza la instalación, actualización y gestión de bibliotecas externas en un proyecto.
+
+## Comandos utiles
+```bash
+docker exec -it {contenedor} bash
+```
