@@ -225,3 +225,4 @@ Producto::factory()->count(50)->create();
 - `php artisan db:seed --class=ProductoSeeder`
 
 - `php artisan migrate` : si hay error actualizar las migraciones
+- `php artisan migrate:refresh`
