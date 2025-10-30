@@ -226,3 +226,8 @@ Producto::factory()->count(50)->create();
 
 - `php artisan migrate` : si hay error actualizar las migraciones
 - `php artisan migrate:refresh`
+
+- 
+## comandos para dar permisos
+
+- ´chmod -R 777 laravel ´
