@@ -46,6 +46,35 @@ Route::controller(MainController::class)->group(function()
 
 });
 
+
+
+
+{{}} = para inyectar php directamente
+
+## Mandar datos con POST y recibirlos 
+
+colocar esta proteccion dentro del formulario
+
+@csrf `<!-- proteccion contra ataques csrf -->`
+
+
+En la vista que recibe los datos se hace esto para pasarle las variables y que se puedan usar en esa vista 
+
+public function Aceptar(Request $request)
+{
+    $datos = $request->all();
+    return view('aceptar');
+}
+
+$datos = $request->all();
+
+ en las vista ya se usa el arreglo de datos:
+
+- $datos['nombre']
+- $datos['apellido']
+- $datos['edad']
+
+
 ## `##`<hr>`##`
 
 ## Creamos la plantilla inicial 
