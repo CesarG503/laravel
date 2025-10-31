@@ -231,3 +231,6 @@ Producto::factory()->count(50)->create();
 ## comandos para dar permisos
 
 - ´chmod -R 777 laravel ´
+- ´php artisan make:model Producto -mfs´ 
+- `php artisan key:generate`
+- `php artisan make:model Producto -mfs`

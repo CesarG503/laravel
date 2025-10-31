@@ -12,3 +12,7 @@
 ```bash
 docker exec -it {contenedor} bash
 ```
+
+## compact()
+
+    La función compact() en PHP (y por tanto en Laravel) sirve para crear un arreglo (array) asociativo usando los nombres de variables como claves y sus valores actuales como valores.
