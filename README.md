@@ -234,3 +234,5 @@ Producto::factory()->count(50)->create();
 - ´php artisan make:model Producto -mfs´ 
 - `php artisan key:generate`
 - `php artisan make:model Producto -mfs`
+
+- ``
