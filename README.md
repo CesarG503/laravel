@@ -280,6 +280,13 @@ class Empleados extends Model
 }
 ```
 
+Nota: la nueva funcion del modelo funciona par obtener datos de la tabla de referencia 
+
+```php
+$empleado = Empleados::find(1);
+echo $empleado->empresa->nombre;
+```
+
 ## factory 
 
 ```php
@@ -293,3 +300,7 @@ class Empleados extends Model
 ```
 
 Nota: El seeder no cambia !!
+
+# Creacion de un controlador con CRUD
+
+documento CRUD.md
