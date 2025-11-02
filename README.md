@@ -231,3 +231,76 @@ Producto::factory()->count(50)->create();
 ## comandos para dar permisos
 
 - ´chmod -R 777 laravel ´
+- `php artisan key:generate`
+
+# Creacion de una tabla con una clave foranea 
+
+- ´php artisan make:model Empresas -mfs´ = definimso esta tabla normalmente 
+- ´php artisan make:model Empleados -mfs´ = hacemo la relacion el la migracion
+
+```php
+
+$table->foreingId()->constrained()->onDelete(); // asi hacemos la relacion con la otra tabla
+
+```
+### Parametrs para hacer la conexion
+
+- #1 nombre nuevo de la columna 
+- #2 nombre de la tabla a la cual le hacemos referencia 
+- #3 la forma como se van a aterar los datos
+
+```php
+$table->foreingId("id_empresas")->constrained("empresas")->onDelete("restrict")->onUpdate('cascade'); 
+```
+Opciones válidas:
+
+- 'cascade' → elimina/actualiza también los registros hijos.
+
+- 'restrict' → evita eliminar si hay registros relacionados.
+
+- 'set null' → pone el valor a NULL (requiere que la columna sea nullable()).
+
+## modelo 
+
+```php
+
+class Empleados extends Model
+{
+    use HasFactory;
+
+    protected $table = "empleados";
+    protected $fillable = ['nombre','empresa_id'];
+
+    public function empresa()
+    {
+     
+        return $this->belongsTo(Empresas::class,'empresa_id');
+    }
+    
+}
+```
+
+Nota: la nueva funcion del modelo funciona par obtener datos de la tabla de referencia 
+
+```php
+$empleado = Empleados::find(1);
+echo $empleado->empresa->nombre;
+```
+
+## factory 
+
+```php
+    public function definition(): array
+    {
+        return [
+            'nombre' => fake()->name(),
+            'empresa_id' => Empresas::factory() //selecciona una opcion valida siempre al ejecutar el seeder
+        ];
+    }
+```
+
+Nota: El seeder no cambia !!
+
+# Creacion de un controlador con CRUD
+
+documento CRUD.md
