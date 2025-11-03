@@ -6,7 +6,7 @@
 
 
 @section('section')
-
+<h1>Proyecto realizado en 1h:32 minutos</h1>
 <h1>Tabla CRUD</h1>
 
 @error('nombre')
