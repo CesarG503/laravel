@@ -1,7 +1,7 @@
 <div>
     
-<table border="1">
-    <thead>
+<table border="1" class="table table-bordered mt-2 table-striped table-hover">
+    <thead class="">
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Edad</th>
