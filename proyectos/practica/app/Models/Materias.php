@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Materias extends Model
+{
+    /** @use HasFactory<\Database\Factories\MateriasFactory> */
+    use HasFactory;
+    protected $table = "materias";
+    protected $fillable = [
+        "nombre",
+        "descripcion",
+    ];
+}
