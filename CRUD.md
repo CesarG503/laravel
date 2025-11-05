@@ -217,3 +217,7 @@ los errores se manejan de la siguiente forma:
 @enderror
 
 ```
+
+# Propiedades de laravel
+
+$empleados->isEmpty()
