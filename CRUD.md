@@ -15,6 +15,9 @@ php artisan make:controller EmpleadosController --resource
 ```bash
 php artisan make:controller ProductoController --resource --model=Producto
 ```
+```bash
+php artisan make:model Productos -mfsr
+```
 
 Ahora configuramos la ruta en archivo `web.php`
 
