@@ -12,7 +12,7 @@ class MateriasController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**

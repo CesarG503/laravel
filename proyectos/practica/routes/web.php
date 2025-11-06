@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\Estudiantes;
+use App\Http\Controllers\EstudiantesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('estudiantes',Estudiantes::class);
+Route::resource('estudiante',EstudiantesController::class);
