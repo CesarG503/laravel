@@ -18,11 +18,14 @@ class EstudiantesFactory extends Factory
      */
     public function definition(): array
     {
+        $materias = Materias::all();
+        $notas = Notas::all();
+
         return [
         "nombre" => fake()->name(),
         "apellido" => fake()->lastName(),
-        "id_materia" => Materias::factory(),
-        "id_notas" => Notas::factory()
+        "id_materia" => $materias->random()->id,
+        "id_notas" => $notas->random()->id
         ];
     }
 }
