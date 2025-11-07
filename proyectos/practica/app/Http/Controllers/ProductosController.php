@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Materias;
 use App\Models\Productos;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Productos::all(); 
+        $materias = Materias::all();
+        return view('productos.index', compact('productos', 'materias'));
     }
 
     /**
@@ -20,7 +23,7 @@ class ProductosController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

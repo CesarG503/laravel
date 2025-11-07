@@ -12,7 +12,8 @@ class MateriasController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $materias = Materias::all();
+        return view('materia.index', compact('materias'));
     }
 
     /**
