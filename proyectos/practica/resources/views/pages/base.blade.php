@@ -9,9 +9,24 @@
 <body>
 
 <div>
+
+<img src="{{asset('img/img1.jpg')  }}" alt="">
+
+<div class="navbar navbar-dark bg-dark">
+    <div class="container d-flex justify-content-end"> 
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                  <a href="" class="nav-link"> Emlpeados</a> 
+            </li>
+         
+
+        </ul>
+     
+    </div>
+</div>
 @yield('header')
 </div>
-<div>
+<div class="container-md">
 @yield('section')
 </div>
 <div>

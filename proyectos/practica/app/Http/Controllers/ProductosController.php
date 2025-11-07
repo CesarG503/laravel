@@ -30,13 +30,18 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([],[]);
+        
+        Productos::create($request->all());
+
+        return redirect()->route('producto.index')->with(['success','Producto Creado Con Exito']);
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Productos $productos)
+    public function show(Productos $producto)
     {
         //
     }
@@ -44,24 +49,31 @@ class ProductosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Productos $productos)
+    public function edit(Productos $producto)
     {
-        //
+        
+        return view('producto.edit',['producto'=> $producto]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Productos $productos)
+    public function update(Request $request, Productos $producto)
     {
-        //
+        $request->validate([],[]);
+
+        $producto->update($request->all());
+
+       return redirect()->route('producto.index')->with(['success','Producto Editado Con Exito']);
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Productos $productos)
+    public function destroy(Productos $producto)
     {
-        //
+        $producto->delete();
+        return redirect()->route('producto.index')->with(['success' => 'Producto Borrado correctamente']);
     }
 }
